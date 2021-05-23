@@ -8,8 +8,6 @@ gene_cell = readcell('TRAIN_set_features.xlsx');
 %%
 
 
-
-
 train_data = cell2mat(gene_cell(2:end,3:end));
 train_labels = cell2mat(gene_cell(2:end,2));
 
