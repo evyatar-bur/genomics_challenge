@@ -67,6 +67,7 @@ end
 % Finding the minimum error and the feature used to get it
 [min_error,ind] = min(mean(Error_rate_vec));
 
+disp(min_error)
 
 end
 
