@@ -38,8 +38,8 @@ for i = 2:length(train_gene_cell(:,2))
     end
 end
 
-chrome_features = cell2mat(patiant_cell(:,2));
+chrom_features = cell2mat(patiant_cell(:,2));
 
-clearvars -except chrome_features
+clearvars -except chrom_features
 
-save('chrome_features.mat','chrome_features')
+save('chrom_features.mat','chrom_features')
