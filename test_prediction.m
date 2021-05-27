@@ -15,7 +15,6 @@ test_data = test_data(:,[10,8,3,108,11,62]);
 % Reading training data from file 
 train_gene_cell = readcell('TRAIN_set_features.xlsx');
 
-
 train_data = cell2mat(train_gene_cell(2:end,3:end));
 train_labels = cell2mat(train_gene_cell(2:end,2));
 
@@ -26,7 +25,10 @@ train_data = train_data(:,[10,8,3,108,11,62]);
 
 model = @(learn_data,learn_labels,test_data)predict(fitcsvm(learn_data,learn_labels,'KernelFunction','linear'),test_data);
 
-test_prediction = model(train_data,train_labels,test_data);
+Test_Prediction = cell(211,1);
+Test_Prediction(:,1) = test_gene_cell(2:end,1); 
+Test_Prediction(:,2) = num2cell(model(train_data,train_labels,test_data));
 
 
+save('Test_Prediction.mat', 'Test_Prediction');
 

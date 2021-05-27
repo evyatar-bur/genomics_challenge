@@ -38,10 +38,10 @@ end
 model = @(learn_data,learn_labels,valid_data,valid_labels)sum(predict(fitcsvm(learn_data,learn_labels,'KernelFunction','linear'),valid_data)~=valid_labels);
 
 % Preallocating error rate vector
-Error_rate_vec = ones(5,119)*100;
+Error_rate_vec = ones(5,142)*100;
 
 for valid_ind = 1:5
-    for feature = 1:119
+    for feature = 1:142
         
         if ~ismember(feature,saved_indexes)
     
