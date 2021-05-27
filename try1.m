@@ -22,4 +22,6 @@ end
 bar(1:length(values(gene_map)),cell2mat(values(gene_map)))
     
 xticks(1:16)
-xticklabels(keys(gene_map))
+xticklabels(keys(gene_map));
+
+set(gca,'TickLabelInterpreter','none','FontSize',8)
